@@ -4,7 +4,7 @@ describe('Return Book Feature', () => {
         loginWithCorrectCredentials();
     });
 
-    it('TC_RETURN_001: Test Basic Scan Button Functionality', () => {
+    it('TC_RETURNBOOK_01: Test Basic Scan Button Functionality', () => {
         cy.contains('Return', { timeout: 10000 }).should('be.visible').click();
         cy.contains('Get Started').click();
         cy.contains('Enter Manually').click();
@@ -18,6 +18,17 @@ describe('Return Book Feature', () => {
 
         cy.contains('Go Back', { timeout: 10000 }).should('be.visible').click();
     });
+
+    it('TC_RETURNBOOK_02: Test Return Invalid Borrowed Code', () => {
+        cy.contains('Return', { timeout: 10000 }).should('be.visible').click();
+        cy.contains('Get Started').click();
+        cy.contains('Enter Manually').click();
+        cy.get('input[type="text"][id^=":r"]').type('KD-P51070684543LjA');
+        cy.contains('Submit').click();
+
+        cy.contains('Data borrowed books not found. Please try again.', { timeout: 10000 }).should('be.visible');
+    });
+
 });
 
 function loginWithCorrectCredentials() {

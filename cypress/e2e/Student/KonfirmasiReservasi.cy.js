@@ -1,6 +1,6 @@
 describe('Return Book Feature', () => {
     beforeEach(() => {
-        cy.visit('/'); // Ganti '/' dengan URL halaman utama Anda
+        cy.visit('/');
     });
 
     it('TC_RETURN_001: Test Basic Scan Button Functionality', () => {

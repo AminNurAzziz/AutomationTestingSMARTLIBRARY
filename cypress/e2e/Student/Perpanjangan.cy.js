@@ -4,7 +4,7 @@ describe('Return Book Feature', () => {
         loginWithCorrectCredentials();
     });
 
-    it('TC_RETURN_001: Test Basic Scan Button Functionality', () => {
+    it('TC_EXTEND_01: Test Basic Extend Functionality', () => {
         cy.contains('Return', { timeout: 10000 }).should('be.visible').click();
         cy.contains('Get Started').click();
         cy.contains('Enter Manually').click();

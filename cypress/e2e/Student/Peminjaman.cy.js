@@ -41,7 +41,7 @@ describe('Borrowing Feature', () => {
         cy.contains(studentData.major).should('be.visible');
     });
 
-    it('Search for a book and reserve it', () => {
+    it('TC_IFOSTUDENT_002: Search for a book and Borrow it', () => {
         cy.contains('Get Started').click();
         cy.contains('Enter Manually').click();
         cy.get('input[type="text"]').type('2141762034');
@@ -68,6 +68,4 @@ describe('Borrowing Feature', () => {
 
         cy.contains('Go Back').click();
     });
-
-
 });
