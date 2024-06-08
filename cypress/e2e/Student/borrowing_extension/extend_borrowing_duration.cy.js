@@ -1,17 +1,17 @@
-describe('Return Book Feature', () => {
+describe('Extend Borrowing Duration', () => {
     beforeEach(() => {
         cy.visit('/login');
         loginWithCorrectCredentials();
     });
 
-    it('TC_EXTEND_01: Test Basic Extend Functionality', () => {
+    it('Check system behavior when borrowing duration is confirmed', () => {
         cy.contains('Return', { timeout: 10000 }).should('be.visible').click();
         cy.contains('Get Started').click();
         cy.contains('Enter Manually').click();
-        cy.get('input[type="text"][id^=":r"]').type('KD-P51070684546HM');
+        cy.get('input[type="text"][id^=":r"]').type('KD-P2663854991tK4');
         cy.contains('Submit').click();
 
-        cy.contains('KD-P51070684546HM', { timeout: 10000 }).should('be.visible');
+        cy.contains('KD-P2663854991tK4', { timeout: 10000 }).should('be.visible');
         cy.contains('dipinjam').should('be.visible');
 
         cy.get('.MuiGrid-root').contains('Extend').click();
@@ -20,6 +20,7 @@ describe('Return Book Feature', () => {
         cy.contains('Go Back', { timeout: 10000 }).should('be.visible').click();
     });
 });
+
 
 function loginWithCorrectCredentials() {
     cy.get('#email').clear().type('admin@example.com');
@@ -30,5 +31,3 @@ function loginWithCorrectCredentials() {
 Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 });
-
-
