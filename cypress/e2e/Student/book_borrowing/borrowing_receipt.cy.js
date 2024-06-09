@@ -14,8 +14,8 @@ describe('Borrowing Receipt', () => {
     it('Check system behavior when borrowing receipt is successfully printed', () => {
         cy.get('tr.MuiTableRow-root.css-f4jir').eq(0)
             .should('contain', 'Quia aut autem.')
-            .and('contain', '2024-06-08')
-            .and('contain', '2024-06-18')
+            .and('contain', '2024-06-09')
+            .and('contain', '2024-06-19')
             .and('contain', 'Available');
         cy.get('tr.MuiTableRow-root.css-f4jir').eq(0)
             .within(() => {
@@ -31,8 +31,8 @@ describe('Borrowing Receipt', () => {
     it('Check system behavior when borrowing receipt is sent via email', () => {
         cy.get('tr.MuiTableRow-root.css-f4jir').eq(1)
             .should('contain', 'Quia aut autem.')
-            .and('contain', '2024-06-08')
-            .and('contain', '2024-06-18')
+            .and('contain', '2024-06-09')
+            .and('contain', '2024-06-19')
             .and('contain', 'Available');
         cy.get('tr.MuiTableRow-root.css-f4jir').eq(1)
             .within(() => {
@@ -48,8 +48,8 @@ describe('Borrowing Receipt', () => {
     it('Check system behavior when borrowing receipt is sent to alternative email', () => {
         cy.get('tr.MuiTableRow-root.css-f4jir').eq(2)
             .should('contain', 'Quia aut autem.')
-            .and('contain', '2024-06-08')
-            .and('contain', '2024-06-18')
+            .and('contain', '2024-06-09')
+            .and('contain', '2024-06-19')
             .and('contain', 'Available');
         cy.get('tr.MuiTableRow-root.css-f4jir').eq(2)
             .within(() => {

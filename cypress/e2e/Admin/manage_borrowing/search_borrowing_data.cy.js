@@ -6,7 +6,7 @@ describe('Check search data of manage borrowing functionality', () => {
     });
 
     it("Check system behavior when user searches manage borrowing data by Kode Peminjaman", () => {
-        cy.get('.form-control').type('KD-P2663854991tvR');
+        cy.get('.form-control').type('KD-P2663854991M6Q');
         cy.contains('Quia aut autem.');
     });
 

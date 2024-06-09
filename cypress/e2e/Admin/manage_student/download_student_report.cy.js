@@ -9,14 +9,14 @@ describe('Download Student Report', () => {
         cy.contains('Download PDF').click();
         cy.wait(2000);
 
-        cy.readFile('cypress/downloads/StudentList.pdf').should('exist');
+        cy.readFile('cypress/downloads/students.pdf').should('exist');
     });
 
     it("Check system behavior when student data is downloaded in format of Excel", () => {
         cy.get('.btn.btn-success').click();
         cy.wait(2000);
 
-        cy.readFile('cypress/downloads/StudentList.xlsx').should('exist');
+        cy.readFile('cypress/downloads/students.xlsx').should('exist');
     });
 });
 

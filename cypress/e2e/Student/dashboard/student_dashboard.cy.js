@@ -9,7 +9,7 @@ describe('Student Dashboard', () => {
     it('Check system behavior when displayed data is correct', () => {
         const studentData = {
             nim: '2141762034',
-            name: 'John Doe',
+            name: 'Amin Nur Azziz',
             class: 'quam',
             major: 'quas'
         };

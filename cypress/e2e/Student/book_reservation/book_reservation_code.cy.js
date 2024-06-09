@@ -13,8 +13,8 @@ describe('Book Reservation Code', () => {
         cy.contains('Veritatis sint maiores aut.', { timeout: 10000 }).should('be.visible');
         cy.get('.MuiBox-root.css-kl1xo3').contains('Reservasi').click();
         cy.get('tr.MuiTableRow-root.css-f4jir').should('contain', 'Veritatis sint maiores aut.')
-            .and('contain', '2024-06-08')
-            .and('contain', '2024-06-18')
+            .and('contain', '2024-06-09')
+            .and('contain', '2024-06-19')
             .and('contain', 'Available');
 
         cy.get('tr.MuiTableRow-root.css-f4jir').within(() => {

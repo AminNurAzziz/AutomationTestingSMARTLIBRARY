@@ -14,8 +14,8 @@ describe('Borrowing Book', () => {
     it('Check system when book is confirmed to borrow', () => {
         cy.get('tr.MuiTableRow-root.css-f4jir').eq(0)
             .should('contain', 'Quia aut autem.')
-            .and('contain', '2024-06-08')
-            .and('contain', '2024-06-18')
+            .and('contain', '2024-06-09')
+            .and('contain', '2024-06-19')
             .and('contain', 'Available');
         cy.get('tr.MuiTableRow-root.css-f4jir').eq(0)
             .within(() => {
@@ -31,8 +31,8 @@ describe('Borrowing Book', () => {
     it('Check system behavior when borrowing book is canceled', () => {
         cy.get('tr.MuiTableRow-root.css-f4jir').eq(1)
             .should('contain', 'Quia aut autem.')
-            .and('contain', '2024-06-08')
-            .and('contain', '2024-06-18')
+            .and('contain', '2024-06-09')
+            .and('contain', '2024-06-19')
             .and('contain', 'Available');
         cy.get('tr.MuiTableRow-root.css-f4jir').eq(1)
             .within(() => {

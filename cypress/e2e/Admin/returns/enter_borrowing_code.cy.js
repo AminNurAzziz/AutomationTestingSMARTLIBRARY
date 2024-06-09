@@ -8,10 +8,10 @@ describe('Enter Borrowing Code in Returns', () => {
     it("Check system behavior when borrowing-code is entered correctly", () => {
         cy.contains('Get Started').click();
         cy.contains('Enter Manually').click();
-        cy.get('input[type="text"][id^=":r"]').type('KD-P2663854991tvR');
+        cy.get('input[type="text"][id^=":r"]').type('KD-P2663854991gBd');
         cy.contains('Submit').click();
 
-        cy.contains('KD-P2663854991tvR', { timeout: 10000 }).should('be.visible');
+        cy.contains('KD-P2663854991gBd', { timeout: 10000 }).should('be.visible');
         cy.contains('dipinjam').should('be.visible');
     });
 
